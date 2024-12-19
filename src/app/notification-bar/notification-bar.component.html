@@ -1,0 +1,12 @@
+<div class="notification-bar-wrapper">
+    <div *ngFor="let notification of notifications; let index=index"
+        [ngClass]="'notification-bar notification-bar-' + notification.type">
+        <button *ngIf="notification.closeable" class="notification-close-button"
+            (click)="onClose(notification, index)">X</button>
+        <div class="notification-bar-message">
+            <span *ngIf="notification.isHtml" [innerHTML]="notification.message"></span>
+            <span *ngIf="!notification.isHtml">{{ notification.message }}</span>
+            <button *ngIf="notification.actionable" (click)="onAction(notification, index)"
+                class="notification-action-button">{{ notification.actionText }}</button>
+        </div>
+    </div>

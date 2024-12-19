@@ -1,0 +1,38 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-form-field {
+  width: 100%;
+  margin: auto;
+}
+.main-body {
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+.action-icon:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.completed {
+  background-color: rgb(65, 135, 226);
+}
+
+.development {
+  background-color: yellow;
+}
+
+.test {
+  background-color: rgb(38, 180, 102);
+}
+
+.uc-review {
+  background-color: rgb(236, 141, 103);
+}
+
+.rejected {
+  background-color: rgb(235, 11, 11);
+  color: white;
+}

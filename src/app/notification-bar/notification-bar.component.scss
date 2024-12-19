@@ -1,0 +1,94 @@
+@import '../variables';
+
+:host {
+  position: relative;
+}
+        
+.notification-bar-wrapper {
+
+  // reset all element to prevent css leakage from coming in;
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  border: 1px solid $notification-bar-border-color;
+  display: block;
+  line-height: 25px;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  width: 100%;
+  z-index: 6;
+
+  .notification-bar {
+    align-items: center;
+    display: inline-flex;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    width: 100%;
+
+    button {
+      border: 0;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      margin: 1px;
+      padding: 0.15rem 0.5rem;
+      text-align: center;
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    button.notification-close-button,
+    button.notification-action-button {
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      color: #000;
+      transition: all 0.25s ease;
+    }
+
+    button.notification-action-button:hover {
+      color: #ffffff;
+    }
+
+    button.notification-close-button:hover {
+      background: notification-bar-close-button-background;
+      color: #fff;
+    }
+
+    .notification-bar-message {
+      display: flex;
+      margin: auto;
+    }
+
+    &.notification-bar-0 {
+      background-color: $notification-bar-error-background-color;
+      border: 1px solid $notification-bar-error-border-color;
+    }
+
+    &.notification-bar-1 {
+      background-color: $notification-bar-info-background-color;
+      border: 1px solid $notification-bar-info-border-color;
+    }
+    &.notification-bar-2 {
+      background-color: $notification-bar-success-background-color;
+      border: 1px solid $notification-bar-success-border-color;
+    }
+
+    &.notification-bar-3 {
+      background-color: $notification-bar-warning-background-color;
+      border: 1px solid $notification-bar-warning-border-color;
+    }
+  }
+}
